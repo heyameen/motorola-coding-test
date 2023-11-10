@@ -1,10 +1,12 @@
 @import '../../styles.scss';
 
-.login-container {
+form {
   text-align: center;
   width: 300px;
+  display: flex;
+  flex-direction: column;
 
-  .logo {
+   .logo {
     width: 60px;
     align-self: center;
 
@@ -21,11 +23,11 @@
   p {
     margin: 0 0 1.5rem;
   }
-}
 
-form {
-  display: flex;
-  flex-direction: column;
+  .error {
+    color: red;
+    margin-bottom: 10px;
+  }
 
   input {
     background-color: #DDE3EEA8;
@@ -58,7 +60,7 @@ form {
     }
 
     &:disabled {
-      background-color: lighten($button-color, 20%);
+      background-color: lighten($button-color, 30%);
       cursor: default;
     }
   }

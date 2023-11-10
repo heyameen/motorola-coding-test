@@ -1,10 +1,13 @@
-<form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="login-container">
+<form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
   <div class="logo">
     <img src="../assets/motorola.png" alt="Logo" >
   </div>
   <h2>Sign in</h2>
   <p>Sign in to access the portal!</p>
-  <input type="text" ngModel name="username" placeholder="Username" required>
-  <input type="password" ngModel name="password" placeholder="Password" required>
+
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <input type="text" formControlName="username" placeholder="Username">
+  <input type="password" formControlName="password" placeholder="Password">
   <button type="submit" [disabled]="!loginForm.valid">Login</button>
 </form>
