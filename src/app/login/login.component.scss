@@ -1,0 +1,67 @@
+@import '../../styles.scss';
+
+.login-container {
+  text-align: center;
+  width: 300px;
+
+  .logo {
+    width: 60px;
+    align-self: center;
+
+    img{
+      width: inherit;
+    }
+  }
+
+  h2{
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0 0 1.5rem;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    background-color: #DDE3EEA8;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #000;
+
+    &::placeholder {
+      color: lighten(#000, 20%);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    background-color: $button-color;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($button-color, 10%);
+    }
+
+    &:disabled {
+      background-color: lighten($button-color, 20%);
+      cursor: default;
+    }
+  }
+
+
+}
