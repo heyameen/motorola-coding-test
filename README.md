@@ -8,8 +8,8 @@ These instructions will get you a copy of the project up and running on your loc
 ## Prerequisites
 Before you begin, ensure you have the following tools installed:
 
-Node.js: Download & Install Node.js
-Angular CLI: Install the Angular CLI globally by running `npm install -g @angular/cli` in your terminal.
+1. Node.js: [Download & Install Node.js](https://nodejs.org/en/download/)
+2. Angular CLI: Install the Angular CLI globally by running `npm install -g @angular/cli` in your terminal.
 
 ## Installing
 Follow these steps to get your development environment running:
