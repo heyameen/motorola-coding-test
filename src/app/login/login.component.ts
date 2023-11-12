@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/shared/services/auth/auth.service';
 
@@ -10,7 +10,7 @@ import { AuthService } from 'src/shared/services/auth/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  loginForm = this.fb.group({
+  loginForm: FormGroup = this.fb.group({
     username: ['', Validators.required],
     password: ['', Validators.required]
   });
@@ -23,11 +23,9 @@ export class LoginComponent {
     private router: Router
   ) { }
 
-  onSubmit() {
-      const username = this.loginForm.value.username || '';
-      const password = this.loginForm.value.password || '';
+  onSubmit() {    
+    const { username, password} = this.loginForm.value
     if (this.authService.login(username, password)) {
-        console.log('got here')
         this.router.navigate(['/home']);
       } else {
       this.errorMessage = 'Invalid username or password';
