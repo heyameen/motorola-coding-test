@@ -5,13 +5,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-#Prerequisites
+##Prerequisites
 Before you begin, ensure you have the following tools installed:
 
 Node.js: Download & Install Node.js
 Angular CLI: Install the Angular CLI globally by running `npm install -g @angular/cli` in your terminal.
 
-#Installing
+##Installing
 Follow these steps to get your development environment running:
 
 1. Clone the repository:
